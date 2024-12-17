@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
+        /* General styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
@@ -17,8 +18,8 @@
         }
 
         .login-container {
-            background-color: #ffffff;
-            padding: 30px;
+            background: #fff;
+            padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 100%;
@@ -26,9 +27,20 @@
         }
 
         h1 {
-            text-align: center;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
             color: #333;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .error {
+            background-color: #ffe6e6;
+            color: #d9534f;
+            padding: 0.75rem;
+            border: 1px solid #d9534f;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            text-align: center;
         }
 
         form {
@@ -36,32 +48,34 @@
             flex-direction: column;
         }
 
+        form p {
+            margin-bottom: 1rem;
+        }
+
         label {
-            margin-bottom: 8px;
+            font-size: 0.9rem;
             color: #555;
         }
 
         input[type="text"], input[type="password"] {
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 0.75rem;
+            font-size: 1rem;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        input[type="text"]:focus, input[type="password"]:focus {
-            outline: none;
-            border-color: #007BFF;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .button {
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            padding: 0.75rem;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 4px;
             cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
         }
 
         .button:hover {
@@ -70,22 +84,17 @@
 
         .signup-link {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
         }
 
         .signup-link a {
-            color: #007BFF;
+            color: #007bff;
             text-decoration: none;
         }
 
         .signup-link a:hover {
             text-decoration: underline;
-        }
-
-        .error {
-            color: #dc3545;
-            font-size: 14px;
-            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -101,12 +110,13 @@
 
         <form method="post">
             {% csrf_token %}
-            {{form.as_p}}
-
-
+            {{ form.as_p }}
             <button type="submit" class="button">Login</button>
         </form>
 
+        <div class="signup-link">
+            Don't have an account? <a href="{% url 'register' %}">Register</a>
+        </div>
     </div>
 </body>
 </html>
