@@ -133,6 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-
-LOGIN_REDIRECT_URL = '/welcome.html'  # Change to your desired redirect page
-LOGIN_URL = '/accounts/login/'  # Path to your login page
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
+AUTH_USER_MODEL = 'accounts.CustomUser'
