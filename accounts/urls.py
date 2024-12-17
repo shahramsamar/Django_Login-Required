@@ -1,8 +1,10 @@
-from django.urls import path, include
-from .views import WelcomeView
 
+
+from django.urls import path
+from .views import WelcomeView, RegisterView, CustomLoginView
 
 urlpatterns = [
     path('', WelcomeView.as_view(), name='welcome'),
-    # Other URLs like login, logout, dashboard, etc.
+    path('login/', CustomLoginView.as_view(), name='login'),
+    path('register/', RegisterView.as_view(), name='register'),
 ]
