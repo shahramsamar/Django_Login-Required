@@ -72,7 +72,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 - **Author**: Shahramsamar
-- **Email**: [shahramsamar2010@gmail.com](mailto:shahramsamar2010@gmail.com)
+- **Email**: [shahramsamar2010@gmail.com](mailto:shahramsamar.dev@gmail.com)
 - **GitHub**: [Shahramsamar](https://github.com/shahramsamar)
 ![Alt](https://repobeats.axiom.co/api/embed/eabe6508a91fa38b4ace0060919094363916f544.svg "Repobeats analytics image")
 
